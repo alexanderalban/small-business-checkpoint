@@ -13,9 +13,6 @@ const Navigation = () => {
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li className="nav-list-item">
                         <Link to="/listings">Listings</Link>
                     </li>
                     <li className="nav-list-item">
