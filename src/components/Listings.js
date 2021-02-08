@@ -7,11 +7,11 @@ import {
     TableHead,
     TableRow
 } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 const Listings = (props) => {
     return (
         <Container maxWidth="lg">
-            <h1>This is the Listings Screen</h1>
             <Table>
                 <TableHead>
                     <TableRow>
@@ -24,7 +24,9 @@ const Listings = (props) => {
                 <TableBody>
                     {props.business.map((business, idx) => (
                         <TableRow key={idx}>
-                            <TableCell>{business.name}</TableCell>
+                            <TableCell>
+                            <Link style={{ textDecoration: "underline", fontWeight: "bold"}} to={`/details/${business.id}`}>{business.name}</Link>
+                                </TableCell>
                             <TableCell>{business.description}</TableCell>
                             <TableCell>{business.hours}</TableCell>
                             <TableCell>{business.address}</TableCell>

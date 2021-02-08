@@ -10,7 +10,9 @@ export default {
             "description": '100% Gluten-free restaurant serving American fare with two bars, a rooftop patio & great views.',
             "address": '1300 E 7th St, Austin, TX 78702',
             "phone": '(512) 628-0184',
-            "hours": '10AM - 10PM'
+            "hours": '10AM - 10PM',
+            "lat": 30.2650501,
+            "lng": -97.72731896970849
         },
         {
             "id": 2,
@@ -19,6 +21,8 @@ export default {
             "address": '4801 Burnet Rd, Austin, TX 78756',
             "phone": '(737) 226-0644',
             "hours": '8AM - 8PM',
+            "lat": 30.3188949,
+            "lng": -97.73893310000001 
         },
         {
             "id": 3,
@@ -27,6 +31,8 @@ export default {
             "address": '2337 E Cesar Chavez St, Austin, TX 78702',
             "phone": '(512) 524-1540',
             "hours": '11AM - 10PM',
+            "lat": 30.2545754,
+            "lng": -97.7179302
         },
         {
             "id": 4,
@@ -35,6 +41,8 @@ export default {
             "address": '1500 Barton Springs Rd, Austin, TX 78704',
             "phone": '(512) 479-1800',
             "hours": '11:30 - 9PM',
+            "lat": 30.2631403802915,
+            "lng": -97.75875301970851 
         },
         {
             "id": 5,
@@ -43,6 +51,8 @@ export default {
             "address": '258 W 2nd St, Austin, TX 78701',
             "phone": '(512) 477-1001',
             "hours": '10AM - 2AM',
+            "lat": 30.2665021302915,
+            "lng": -97.74502131970848
         },
         {
             "id": 6,
@@ -51,6 +61,8 @@ export default {
             "address": '909 W Mary St, Austin, TX 78704',
             "phone": '(512) 494-6436',
             "hours": '9AM - 9PM',
+            "lat": 30.24784039999999,
+            "lng": -97.76038001970849 
         },
         {
             "id": 7,
@@ -59,6 +71,8 @@ export default {
             "address": '1700 S Lamar Blvd Suite 301, Austin, TX 78704',
             "phone": '(512) 428-8444',
             "hours": '6:30AM - 2:30PM',
+            "lat": 30.2517164,
+            "lng": -97.7666282
         },
         {
             "id": 8,
@@ -67,6 +81,8 @@ export default {
             "address": '222 West Ave Ste HR100, Austin, TX 78701',
             "phone": '(512) 777-2430',
             "hours": '11AM - 9PM',
+            "lat": 30.2517164,
+            "lng": -97.7666282
         },
         {
             "id": 9,
@@ -75,6 +91,8 @@ export default {
             "address": '621 E 7th St, Austin, TX 78701',
             "phone": '(512) 275-0852',
             "hours": '11AM - 9:30PM',
+            "lat": 30.26699,
+            "lng": -97.73600499999999
         },
         {
             "id": 10,
@@ -83,6 +101,8 @@ export default {
             "address": '701 E 53rd St Suite C, Austin, TX 78751',
             "phone": '(737) 215-5936',
             "hours": '10AM - 4PM',
+            "lat": 30.3152767,
+            "lng": -97.7166469
         },
         {
             "id": 11,
@@ -91,6 +111,8 @@ export default {
             "address": '2414A S Lamar Blvd, Austin, TX 78704',
             "phone": '(512) 916-9223',
             "hours": '2:30PM - 9PM',
+            "lat": 30.2471789,
+            "lng": -97.777492 
         },
         {
             "id": 12,
@@ -99,6 +121,8 @@ export default {
             "address": '2612 E Cesar Chavez St Suite 105, Austin, TX 78702',
             "phone": '(512) 599-4052',
             "hours": '5PM - 9PM',
+            "lat": 30.2537,
+            "lng": -97.71442999999999
         },
         {
             "id": 13,
@@ -107,6 +131,8 @@ export default {
             "address": '1401 Rosewood Ave, Austin, TX 78702',
             "phone": '(512) 524-0933',
             "hours": '10AM - 10PM',
+            "lat": 30.2687694,
+            "lng": -97.7240819 
         },
         {
             "id": 14,
@@ -115,6 +141,8 @@ export default {
             "address": '5011 Burnet Rd, Austin, TX 78756',
             "phone": '(512) 792-9546',
             "hours": '10AM - 9PM',
+            "lat": 30.3219131,
+            "lng": -97.7387636
         },
         {
             "id": 15,
@@ -123,6 +151,8 @@ export default {
             "address": '1014 W 6th St, Austin, TX 78703',
             "phone": '(512) 479-5959',
             "hours": '8AM - 7PM',
+            "lat": 30.2719828,
+            "lng": -97.7545514
         },
         {
             "id": 16,
@@ -131,6 +161,8 @@ export default {
             "address": '401 Congress Ave, Austin, TX 78701',
             "phone": '(512) 666-3099',
             "hours": '10AM - 9PM',
+            "lat": 30.26674749999999,
+            "lng": -97.74304189999999
         },
         {
             "id": 17,
@@ -139,6 +171,8 @@ export default {
             "address": '2324 E Cesar Chavez St, Austin, TX 78702',
             "phone": '(512) 956-9550',
             "hours": 'Temporarily Closed',
+            "lat": 30.2550902,
+            "lng": -97.7182267
         },
         {
             "id": 20,
@@ -147,6 +181,8 @@ export default {
             "address": '525 N Lamar Blvd, Austin, TX 78703',
             "phone": '(737) 212-0411',
             "hours": '11AM - 9PM',
+            "lat": 30.2705496,
+            "lng": -97.7531762
         },
         {
             "id": 21,
@@ -155,6 +191,8 @@ export default {
             "address": '5601 Brodie Ln, Sunset Valley, TX 78745',
             "phone": '(512) 277-2220',
             "hours": '11AM - 9PM',
+            "lat": 30.2266794,
+            "lng": -97.82083059999999
         },
         {
             "id": 22,
@@ -163,6 +201,8 @@ export default {
             "address": '1817 S Lamar Blvd, Austin, TX 78704',
             "phone": '(512) 717-8764',
             "hours": '11AM - 10PM',
+            "lat": 30.2496026,
+            "lng": -97.76639469999999
         },
         {
             "id": 23,
@@ -171,6 +211,8 @@ export default {
             "address": '1007 E 6th St, Austin, TX 78702',
             "phone": '(512) 484-0798',
             "hours": '11AM - 10PM',
+            "lat": 30.2634405197085,
+            "lng": -97.7335949802915
         },
         {
             "id": 24,
@@ -179,6 +221,8 @@ export default {
             "address": '2612 E Cesar Chavez St Suite 105, Austin, TX 78702',
             "phone": '(512) 599-4052',
             "hours": '5PM - 9PM',
+            "lat": 30.2537,
+            "lng": -97.71442999999999
         },
         {
             "id": 25,
@@ -187,6 +231,8 @@ export default {
             "address": '500 W 2nd St #120, Austin, TX 78701',
             "phone": '(512) 777-5062',
             "hours": '11AM - 10PM',
+            "lat": 30.2660766,
+            "lng": -97.74955949999999
         },
     ]
 };

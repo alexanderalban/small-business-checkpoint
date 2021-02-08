@@ -4,12 +4,13 @@ import { AppBar, Toolbar, IconButton,
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
+
 const Navigation = () => {
     return (
         <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
             <Toolbar>
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
-                    Small Business Finder
+                    Gluten Free Option Finder
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
