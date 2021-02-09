@@ -1,7 +1,10 @@
 export default {
+    loggedIn: {
+        isLoggedIn: false
+    },
     user: {
         username: "",
-        email: ""
+        password: ""
     },
     business: [
         {

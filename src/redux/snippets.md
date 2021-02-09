@@ -5,6 +5,8 @@
             "address": '',
             "phone": '',
             "operating hours": '',
+            "lat": '',
+            "lng": '',
         },
 
-        
+

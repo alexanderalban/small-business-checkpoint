@@ -1,6 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, 
-    Typography } from '@material-ui/core'
+import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
@@ -10,7 +9,7 @@ const Navigation = () => {
         <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
             <Toolbar>
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
-                    Gluten Free Option Finder
+                    Gluten Free Austin Finder
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
@@ -18,6 +17,12 @@ const Navigation = () => {
                     </li>
                     <li className="nav-list-item">
                         <Link to="/login">Login</Link>
+                    </li>
+                    <li className='nav-list-item'>
+                        <Link to='/add'>Add</Link>
+                    </li>
+                    <li className='nav-list-item'>
+                        <Link to="/logout">Logout</Link>
                     </li>
                 </ul>
             </Toolbar>

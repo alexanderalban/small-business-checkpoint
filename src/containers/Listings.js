@@ -3,6 +3,9 @@ import Listings from '../components/Listings'
 
 const mapStateToProps = (state) => {
     return {
+
+        loggedIn: state.loggedIn,
+        user: state.user,
         business: state.business,
     }
 }

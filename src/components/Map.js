@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker.tsx'
+import Marker from './Marker.js'
 import { useParams } from 'react-router-dom'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;

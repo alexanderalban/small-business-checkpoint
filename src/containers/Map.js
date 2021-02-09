@@ -3,6 +3,8 @@ import Map from '../components/Map'
 
 const mapStateToProps = (state) => {
     return {
+        loggedIn: state.loggedIn,
+        user: state.user,
         business: state.business,
     }
 }

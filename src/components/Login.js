@@ -8,10 +8,10 @@ import {
 import Grid from '@material-ui/core/Grid';
 
 class Login extends Component {
-    state = {
+  state = {
       username: '',
       password: ''
-    }
+  }
 
 
 handleTextChange = (e) => {
@@ -21,20 +21,22 @@ handleTextChange = (e) => {
 }
 
 
-login = (e) => {
+ login = (e) => {
     e.preventDefault()
-    // set cookie here
-    // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = "loggedIn=true;max-age=60*1000*"
+
+
 
     window.location.replace("/")
   }
 
+
+
   render() {
     return (
       <div>
-        <Container maxWidth="md" align="center">
-          <form className="login-form" onSubmit={this.login}>
+        <Container maxWidth="lg" align="center">
+          <form>
             <TextField
               required
               onChange={this.handleTextChange}
@@ -56,7 +58,7 @@ login = (e) => {
               type="submit"
               className="login-button"
               variant="contained"
-              color="primary">Login</Button>
+              color="blue">Login</Button>
           </form>
         </Container>
       </div>
