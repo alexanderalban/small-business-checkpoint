@@ -2,6 +2,7 @@ import { combineReducers } from 'redux'
 
 const user = (state = null) => state
 
+const loggedIn = (state = null) => state
 
 const business = (state = [], action) => {
     switch(action.type) {
@@ -16,4 +17,4 @@ const business = (state = [], action) => {
     }
 }
 
-export default combineReducers({ user, business })
+export default combineReducers({ user, business, loggedIn })

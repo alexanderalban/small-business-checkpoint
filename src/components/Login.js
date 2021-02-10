@@ -27,7 +27,7 @@ handleTextChange = (e) => {
 
 
 
-    window.location.replace("/")
+    window.location.replace("/listings")
   }
 
 
@@ -58,7 +58,9 @@ handleTextChange = (e) => {
               type="submit"
               className="login-button"
               variant="contained"
-              color="blue">Login</Button>
+              color="blue"
+              onCLick={this.login}
+              onSubmit={this.login}>Login</Button>
           </form>
         </Container>
       </div>
