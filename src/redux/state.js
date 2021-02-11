@@ -3,7 +3,7 @@ export default {
         isLoggedIn: false
     },
     user: {
-        username: "",
+        username: "username",
         password: ""
     },
     business: [

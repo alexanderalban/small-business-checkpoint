@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, TextField, Button } from '@material-ui/core'
 import Grid from '@material-ui/core/grid'
 import { useState, useEffect } from 'react'
-import Map from '../containers/Map'
 import AddMap from '../containers/AddMap'
 
 const Add = (props) => {
@@ -37,7 +36,7 @@ const Add = (props) => {
             <Container align="center">
                 <Grid style={{marginTop: "30px"}} container direction="row" align="center">
                         <form onSubmit={add} className="add-form">
-                            <TextField maxWidth="large"
+                            <TextField
                                 onChange={e => setName(e.target.value)}
                                 required 
                                 name="name"

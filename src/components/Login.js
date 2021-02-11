@@ -5,7 +5,9 @@ import {
   Button,
   Container
 } from '@material-ui/core'
-import Grid from '@material-ui/core/Grid';
+import cookie from 'cookie'
+import Typography from '@material-ui/core/Typography';
+import Toolbar from '@material-ui/core/Toolbar';
 
 class Login extends Component {
   state = {
@@ -25,8 +27,6 @@ handleTextChange = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=60*1000*"
 
-
-
     window.location.replace("/listings")
   }
 
@@ -36,7 +36,7 @@ handleTextChange = (e) => {
     return (
       <div>
         <Container maxWidth="lg" align="center">
-          <form>
+          <form onSubmit={this.login}>
             <TextField
               required
               onChange={this.handleTextChange}
@@ -58,9 +58,8 @@ handleTextChange = (e) => {
               type="submit"
               className="login-button"
               variant="contained"
-              color="blue"
-              onCLick={this.login}
-              onSubmit={this.login}>Login</Button>
+              color="inherit"
+              >Login</Button>
           </form>
         </Container>
       </div>

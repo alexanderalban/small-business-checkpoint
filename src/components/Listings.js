@@ -9,9 +9,16 @@ import {
 } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import cookie from 'cookie'
+
+const checkAuth = () => {
+    const cookies = cookie.parse(document.cookie)
+    return cookies["loggedIn"] ? true : false
+}
 
 const Listings = (props) => {
-    if (props.loggedIn.isLoggedIn === false) return (
+    if (!checkAuth() || checkAuth === null) {
+        return (
         <Container maxWidth="lg">
             <Table>
                 <TableHead>
@@ -37,7 +44,9 @@ const Listings = (props) => {
             </Table>
         </Container>
     )
-    else return (
+                    }
+    else if (checkAuth()) {
+         return (
         <Container maxWidth="lg">
             <Table>
                 <TableHead>
@@ -65,6 +74,7 @@ const Listings = (props) => {
             </Table>
         </Container>
     )
+}
 }
 
 export default Listings

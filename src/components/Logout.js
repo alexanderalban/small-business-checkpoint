@@ -1,14 +1,33 @@
-import React from 'react'
-import {Container} from '@material-ui/core'
+import React, { Component } from 'react'
+import {Container, Button} from '@material-ui/core'
+import cookie from 'cookie'
 
-const Logout = (props) => {
 
+
+class Logout extends Component {
+
+    logout = (e) => {
+        e.preventDefault()
+        document.cookie = "loggedIn=false;max-age=1"
+    
+        window.location.replace("/listings")
+      }
+
+render(){
     return(
         <Container maxwidth="md">
-            <h1>You have successfully logged out.</h1>
+            <h1>Are you sure you wish to log out?</h1>
+            <h2>You will not be able to add new businesses to our list until logged back in.</h2>
+            <Button onClick={this.logout} size="large"
+                                type="submit"
+                                color="primary"
+                                className="add-button"
+                                variant="contained"
+              color="inherit">Log out</Button>
         </Container>
 
     )
+}
 }
 
 export default Logout;

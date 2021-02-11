@@ -3,12 +3,16 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 import cookie from 'cookie'
+import Router from '../Router'
 
-
+const checkAuth = () => {
+    const cookies = cookie.parse(document.cookie)
+    return cookies["loggedIn"] ? true : false
+}
 
 const Navigation = (props) => {
-    console.log(props.loggedIn.isLoggedIn)
-    if (props.loggedIn.isLoggedIn === false) 
+    console.log("logged in?" + " " + checkAuth())
+    if (!checkAuth() || checkAuth === null) {
     return (
         <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
             <Toolbar>
@@ -26,8 +30,12 @@ const Navigation = (props) => {
             </Toolbar>
         </AppBar>
     )
-    else return(
-        <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
+    }
+    else if (checkAuth()) {
+        console.log("username is" + " " + props.user.username)
+        return(
+            
+         <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
             <Toolbar>
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
                     Gluten Free Austin Finder
@@ -44,8 +52,15 @@ const Navigation = (props) => {
                     </li>
                 </ul>
             </Toolbar>
+            <Toolbar>
+                <Typography>
+                    Logged in as: {props.user.username}
+                </Typography>
+            </Toolbar>
         </AppBar>
     )
+}
+
 }
 
 export default Navigation

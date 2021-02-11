@@ -1,19 +1,20 @@
 import './App.css';
 import Navigation from './containers/Navigation'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Redirect, useHistory } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import Router from './Router'
 import store from './redux/store'
+import cookie from 'cookie'
 
 function App() {
   return (
     <div className="App">
-      <Provider store={store}>
         <BrowserRouter>
-          <Navigation />
-          <Router />
+          <Provider store={store}>
+            <Navigation />
+            <Router />
+          </Provider>
         </BrowserRouter>
-      </Provider>
     </div>
   );
 }

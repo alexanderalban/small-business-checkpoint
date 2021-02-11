@@ -4,7 +4,6 @@ import cookie from 'cookie'
 import Listings from './containers/Listings'
 import Login from './containers/Login'
 import Details from './containers/Details'
-import Map from './containers/Map'
 import Add from './containers/Add'
 import Logout from './containers/Logout'
 
@@ -30,8 +29,8 @@ const Router = () => {
             <Route exact path='/'component={Listings} />
             <Route path="/listings" component={Listings} />
             <Route path="/login" component={Login} />
-            <Route path="/add" component={Add} />
-            <Route path="/logout" component={Logout} />
+            <ProtectedRoute path="/add" component={Add} />
+            <ProtectedRoute path="/logout" component={Logout} />
             <Route exact path="/details/:id" component={Details} />
         </Switch>
     );

@@ -43,6 +43,6 @@ export const deleteLocation = (index) => {
 export const login = (user) => {
     return {
         type: 'LOGIN',
-        value: user
+        value: username
     }
 }
