@@ -6,6 +6,8 @@ import Login from './containers/Login'
 import Details from './containers/Details'
 import Add from './containers/Add'
 import Logout from './containers/Logout'
+import Navigation from './containers/Navigation'
+import LogoutConfirm from './containers/LogoutConfirm'
 
 const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
@@ -32,6 +34,8 @@ const Router = () => {
             <ProtectedRoute path="/add" component={Add} />
             <ProtectedRoute path="/logout" component={Logout} />
             <Route exact path="/details/:id" component={Details} />
+            <Route path="/navbar" component={Navigation} />
+            <Route path ="/logoutconfirm" component={LogoutConfirm} />
         </Switch>
     );
 }

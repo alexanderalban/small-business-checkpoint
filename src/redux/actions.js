@@ -1,11 +1,11 @@
 const url = "https://maps.google.com/maps/api/geocode/json?key=AIzaSyDV9qVXL_Czy4GtRoz6phwRS5iKrQh8m1o&address=Austin+Texas"
 
 
-// for default locations
-export const addBusiness = (car) => {
+// for business locations
+export const addBusiness = (business) => {
     return {
         type: 'ADD_BUSINESS',
-        value: car
+        value: business
     }
 }
 
@@ -32,17 +32,18 @@ export const fetchLocation = () => {
     }
 }
 
-export const deleteLocation = (index) => {
+//for login
+export const login = (isLoggedIn) => {
     return {
-        type: 'DELETE_LOCATION',
-        value: index
+        type: 'LOGIN',
+        value: isLoggedIn
     }
 }
 
-//for login
-export const login = (user) => {
+//for logout
+export const logout = (isLoggedIn) => {
     return {
-        type: 'LOGIN',
-        value: username
+        type: 'LOGOUT',
+        value: isLoggedIn
     }
 }

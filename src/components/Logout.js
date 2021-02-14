@@ -10,7 +10,9 @@ class Logout extends Component {
         e.preventDefault()
         document.cookie = "loggedIn=false;max-age=1"
     
-        window.location.replace("/listings")
+        window.location.reload('/listings')
+        window.location.reload('/navigation')
+        window.location.replace("/logoutconfirm")
       }
 
 render(){
