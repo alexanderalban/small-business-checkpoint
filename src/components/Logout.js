@@ -11,7 +11,6 @@ class Logout extends Component {
         document.cookie = "loggedIn=false;max-age=1"
     
         window.location.reload('/listings')
-        window.location.reload('/navigation')
         window.location.replace("/logoutconfirm")
       }
 
@@ -20,7 +19,8 @@ render(){
         <Container maxwidth="md">
             <h1>Are you sure you wish to log out?</h1>
             <h2>You will not be able to add new businesses to our list until logged back in.</h2>
-            <Button onClick={this.logout} size="large"
+            <Button onClick={this.logout} 
+                                size="large"
                                 type="submit"
                                 color="primary"
                                 className="add-button"

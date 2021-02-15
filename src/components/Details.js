@@ -1,16 +1,11 @@
 import React from 'react'
 import {
-    Container,
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableRow
+    Container
 } from '@material-ui/core'
 import Map from '../containers/Map'
 
 const Details = (props) => {
-    const thisBusiness = props.business.find(business => business.id == props.match.params.id)
+    const thisBusiness = props.business.find(business => business.id === props.match.params.id)
     // console.log(props.business)    
     return(
             <Container maxWidth="sm">

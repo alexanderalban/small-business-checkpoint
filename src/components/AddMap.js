@@ -1,16 +1,12 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
-import Marker from './Marker.js'
 import { useParams } from 'react-router-dom'
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const ImageComponent = ({ img }) => <div>{img}</div>
 
 const AddMap = (props) => {
 
     console.log(props.business)
     const { id } = useParams();
-    const thisBusiness = props.business.find(business => business.id == id)
+    const thisBusiness = props.business.find(business => business.id === id)
     const getMapOptions = (maps, props) => {
         return {
         disableDefaultUI: false,

@@ -1,32 +1,31 @@
 import React, { useState, useEffect } from 'react'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import cookie from 'cookie'
-import Router from '../Router'
 
+
+// Checks the cookie to see if the user has logged in
 const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
-
     return cookies["loggedIn"] ? true : false
 }
-
-
 
 const Navigation = (props) => {
 
     //Global State Login Status
-    console.log("logged in?" + " " + checkAuth())
+    console.log(`logged in? ${checkAuth()}`)
 
     //Local State Login Status for Navbar
-    const [localLog, setLocal] = useState(false)
+    const [localLog, setLocalLog] = useState(false)
+
     console.log(`Local Login Status: ${localLog}`)
 
     useEffect(() => {
         if(!checkAuth()) {
-            setLocal(false)
+            setLocalLog(false)
+            
         } else if (checkAuth()) {
-            setLocal(true)
+            setLocalLog(true)
         }
     })
 

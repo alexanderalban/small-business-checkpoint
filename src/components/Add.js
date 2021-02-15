@@ -26,8 +26,7 @@ const Add = (props) => {
             "description": description,
         }
 
-        props.addBusiness(newBusiness)
-        props.history.push("/");
+        props.addBusiness(newBusiness);
 
     }
 
