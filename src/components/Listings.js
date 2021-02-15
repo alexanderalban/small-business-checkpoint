@@ -59,15 +59,15 @@ const Listings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.business.map((business, idx) => (
-                        <TableRow key={idx}>
+                    {props.business.map((business, index) => (
+                        <TableRow key={index}>
                             <TableCell>
                             <Link style={{ textDecoration: "underline", fontWeight: "bold"}} to={`/details/${business.id}`}>{business.name}</Link>
                                 </TableCell>
                             <TableCell>{business.description}</TableCell>
                             <TableCell>{business.hours}</TableCell>
                             <TableCell>{business.address}</TableCell>
-                            <TableCell><DeleteForeverIcon color="secondary" cursor='pointer'/></TableCell>
+                            <TableCell><DeleteForeverIcon color="secondary" cursor='pointer' onClick={() => props.removeBusiness(index)}/></TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
