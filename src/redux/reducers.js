@@ -5,9 +5,11 @@ const user = (state = null) => state
 const loggedIn = (state = false, action) => {
     switch(action.type) {
         case 'LOGIN':
-            return true;
+            const loggedInTrue = action.value;
+            return loggedInTrue;
         case 'LOGOUT':
-            return false;
+            const loggedInFalse = action.value;
+            return loggedInFalse;
         default: 
             return state
     }

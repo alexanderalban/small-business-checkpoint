@@ -5,7 +5,8 @@ import {
 import Map from '../containers/Map'
 
 const Details = (props) => {
-    const thisBusiness = props.business.find(business => business.id === props.match.params.id)
+    const id = props.match.params.id
+    const thisBusiness = props.business.find(business => business.id == id)
     // console.log(props.business)    
     return(
             <Container maxWidth="sm">

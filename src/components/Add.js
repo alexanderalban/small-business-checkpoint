@@ -11,57 +11,75 @@ const Add = (props) => {
     const [hours, setHours] = useState("")
     const [description, setDescription] = useState("")
 
-    const businessIds = []
-    props.business.map(business => businessIds.push(business.id))
-    const newId = (Math.max(...businessIds)) + 1
+    const handleNameChange = (e) => {
+        setName(e.target.value)
+    }
 
-    const add = (e) => {
-        e.preventDefault()
-        
-        const newBusiness = { 
-            "id": newId,
-            "name": name, 
-            "address": address,
-            "hours": hours,
-            "description": description,
+    const handleAddressChange = (e) => {
+        setAddress(e.target.value)
+    }
+
+    const handleHoursChange = (e) => {
+        setHours(e.target.value)
+    }
+
+    const handleDescriptionChange = (e) => {
+        setDescription(e.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const idNumber = parseInt(props.business[props.business.length - 1].id);
+        const newBusiness = {
+            id: idNumber + 1,
+            name,
+            address,
+            hours,
+            description,
         }
-
         props.addBusiness(newBusiness);
-
     }
 
 
         return (
             <Container align="center">
                 <Grid style={{marginTop: "30px"}} container direction="row" align="center">
-                        <form onSubmit={add} className="add-form">
+                        <form onSubmit={handleSubmit} className="add-form">
                             <TextField
-                                onChange={e => setName(e.target.value)}
-                                required 
+                                required
+                                id="name"
+                                value={name}
+                                onChange={handleNameChange}
                                 name="name"
                                 label="Name"
                                 type="text"
                                 />
                             <br></br>
                             <TextField
-                                onChange={e => setAddress(e.target.value)}
                                 required
+                                id="address"
+                                value={address}
+                                onChange={handleAddressChange}
                                 name="address"
                                 label="Address"
                                 type="text"
                                 />
                             <br></br>
                             <TextField 
-                                onChange={e => setHours(e.target.value)}
                                 required
+                                id="hours"
+                                value={hours}
+                                onChange={handleHoursChange}
                                 name="hours"
                                 label="Hours (ex. 8AM - 9PM)"
                                 type="text"
                                 />
                             <br></br>
                             <TextField
-                                onChange={e => setDescription(e.target.value)}
                                 required
+                                id="description"
+                                value={description}
+                                onChange={handleDescriptionChange}
                                 name="description"
                                 label="Description"
                                 type="text"

@@ -6,10 +6,9 @@ import cookie from 'cookie'
 
 class Logout extends Component {
 
-    logout = (e) => {
+    logout = (e, props) => {
         e.preventDefault()
         document.cookie = "loggedIn=false;max-age=1"
-    
         window.location.reload('/listings')
         window.location.replace("/logoutconfirm")
       }
