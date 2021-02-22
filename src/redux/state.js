@@ -2,10 +2,28 @@ export default {
     loggedIn: {
         isLoggedIn: false
     },
-    user: {
-        username: "username",
-        password: ""
+    user: [
+    {
+        "id": 1,
+        "username": "username",
+        "password": ""
     },
+    {
+        "id": 2,
+        "username": "secondOne",
+        "password": ""
+    },
+    {
+        "id": 3,
+        "username": "",
+        "password": ""
+    },
+    ],
+    newUser: [
+    {
+        "username": "",
+    }
+    ],
     business: [
         {
             "id": 1,
@@ -43,7 +61,7 @@ export default {
             "description": 'Modern & classic Italian fare & drinks in a spacious, multiroom setting with luxe flourishes.',
             "address": '1500 Barton Springs Rd, Austin, TX 78704',
             "phone": '(512) 479-1800',
-            "hours": '11:30 - 9PM',
+            "hours": '11:30AM - 9PM',
             "lat": 30.2631403802915,
             "lng": -97.75875301970851 
         },
@@ -178,7 +196,7 @@ export default {
             "lng": -97.7182267
         },
         {
-            "id": 20,
+            "id": 18,
             "name": 'Next Level Burger',
             "description": 'Dine-in, Takeout, and No-Contact Delivery. Also available via Grubhub',
             "address": '525 N Lamar Blvd, Austin, TX 78703',
@@ -188,7 +206,7 @@ export default {
             "lng": -97.7531762
         },
         {
-            "id": 21,
+            "id": 19,
             "name": 'Red Robin Gourmet Burgers and Brews',
             "description": 'Chain for gourmet burgers & other American comfort fare.',
             "address": '5601 Brodie Ln, Sunset Valley, TX 78745',
@@ -198,7 +216,7 @@ export default {
             "lng": -97.82083059999999
         },
         {
-            "id": 22,
+            "id": 20,
             "name": "Austin's Pizza South Lamar",
             "description": 'Take-out & delivery-focused chain serving pizza until late-night with gluten-free & vegan options.',
             "address": '1817 S Lamar Blvd, Austin, TX 78704',
@@ -208,7 +226,7 @@ export default {
             "lng": -97.76639469999999
         },
         {
-            "id": 23,
+            "id": 21,
             "name": 'Spartan Pizza',
             "description": 'NYC-style specialty pizza, plus sandwiches & salads, served in a natural light-filled location.',
             "address": '1007 E 6th St, Austin, TX 78702',
@@ -218,7 +236,7 @@ export default {
             "lng": -97.7335949802915
         },
         {
-            "id": 24,
+            "id": 22,
             "name": 'Intero Restaurant',
             "description": 'Sustainability focused farm-to-table Italian with pasta & artisanal chocolate on a rotational menu.',
             "address": '2612 E Cesar Chavez St Suite 105, Austin, TX 78702',
@@ -228,7 +246,7 @@ export default {
             "lng": -97.71442999999999
         },
         {
-            "id": 25,
+            "id": 23,
             "name": 'North Italia',
             "description": 'Buzzy, modern Italian option with a patio for thin-crust pizzas & sophisticated Italian fare.',
             "address": '500 W 2nd St #120, Austin, TX 78701',

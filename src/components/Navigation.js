@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import cookie from 'cookie'
-
+import Login from './Login'
 
 // Checks the cookie to see if the user has logged in
 const checkAuth = () => {
@@ -49,9 +49,10 @@ const Navigation = (props) => {
     )
     }
     else if (checkAuth()) {
-        console.log("username is" + " " + props.user.username)
-        return(
-            
+        console.log("username is" + " " + props.user[0].username)
+        console.log("new users are " + props.user)
+        return( 
+
          <AppBar position="relative" style={{ backgroundColor: "rgb(60,179,113)" }}>
             <Toolbar>
                 <Typography variant="h6" style={{ flexGrow: "1" }}>
@@ -69,9 +70,9 @@ const Navigation = (props) => {
                     </li>
                 </ul>
             </Toolbar>
-            <Toolbar>
-                <Typography>
-                    Logged in as: {props.user.username}
+            <Toolbar className="login-bar" variant="md" style={{ background: '#D3D3D3', height: "20px", zIndex:"-1"}}>
+                <Typography style={{ color: '#9F9F9F'}}>
+                    Logged in as: {props.user[2].username}
                 </Typography>
             </Toolbar>
         </AppBar>

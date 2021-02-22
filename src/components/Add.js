@@ -10,21 +10,30 @@ const Add = (props) => {
     const [address, setAddress] = useState("")
     const [hours, setHours] = useState("")
     const [description, setDescription] = useState("")
+    const [phone, setPhone] = useState("")
+    const [lat, setLat] = useState("");
+    const [lng, setLng] = useState("");
 
     const handleNameChange = (e) => {
         setName(e.target.value)
     }
-
     const handleAddressChange = (e) => {
         setAddress(e.target.value)
     }
-
     const handleHoursChange = (e) => {
         setHours(e.target.value)
     }
-
     const handleDescriptionChange = (e) => {
         setDescription(e.target.value)
+    }
+    const handlePhoneChange = (e) => {
+        setPhone(e.target.value)
+    }
+    const handleLatitudeChange = (e) => {
+        setLat(e.target.value)
+    }
+    const handleLongitudeChange = (e) => {
+        setLng(e.target.value)
     }
 
     const handleSubmit = (e) => {
@@ -33,9 +42,12 @@ const Add = (props) => {
         const newBusiness = {
             id: idNumber + 1,
             name,
-            address,
-            hours,
             description,
+            address,
+            phone,
+            hours,
+            lat,
+            lng,
         }
         props.addBusiness(newBusiness);
     }
@@ -85,7 +97,37 @@ const Add = (props) => {
                                 type="text"
                                 />
                             <br></br>
-                            <br></br>
+                            <TextField
+                                required
+                                id="phone"
+                                value={phone}
+                                onChange={handlePhoneChange}
+                                name="phone"
+                                label="Phone"
+                                type="tel"
+                                />
+                                <br></br>
+                            <TextField
+                                required
+                                id="latitude"
+                                value={lat}
+                                onChange={handleLatitudeChange}
+                                name="latitude"
+                                label="Latitude"
+                                type="number"
+                                />
+                                <br></br>
+                                <TextField
+                                required
+                                id="longitude"
+                                value={lng}
+                                onChange={handleLongitudeChange}
+                                name="longitude"
+                                label="Longitude"
+                                type="number"
+                                />
+                                <br></br>
+                                <br></br>
                             <Button size="large"
                                 type="submit"
                                 color="primary"

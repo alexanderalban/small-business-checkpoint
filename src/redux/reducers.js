@@ -15,6 +15,16 @@ const loggedIn = (state = false, action) => {
     }
 }
 
+const newUser = (state = '', action) => {
+    switch(action.type) {
+        case 'USER_UPDATE':
+            const newUsername = action.value;
+            return [ ...state, newUsername]
+        default:
+            return state
+    }
+}
+
 const business = (state = [], action) => {
     switch(action.type) {
         case 'ADD_BUSINESS':
@@ -28,4 +38,29 @@ const business = (state = [], action) => {
     }
 }
 
-export default combineReducers({ user, business, loggedIn })
+const latitude = (state = {lat: null}, action) => {
+    switch(action.type) {
+        case 'FETCH_LATITUDE':
+            const newLat = {
+                lat: action.value
+            }
+            return newLat;
+        default:
+            return state
+    }
+}
+
+
+const longitude = (state = {lng: null}, action) => {
+    switch(action.type) {
+        case 'FETCH_LONGITUDE':
+            const newLng = {
+                lat: action.value
+            }
+            return newLng;
+        default:
+            return state
+    }
+}
+
+export default combineReducers({ user, newUser, business, loggedIn, latitude, longitude })

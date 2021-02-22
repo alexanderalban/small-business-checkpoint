@@ -7,7 +7,7 @@ const mapStateToProps = (state) => {
         loggedIn: state.loggedIn,
         user: state.user,
         business: state.business,
-
+        newUser: state.user
     }
 }
 

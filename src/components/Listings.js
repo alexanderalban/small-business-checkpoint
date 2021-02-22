@@ -30,8 +30,8 @@ const Listings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {props.business.map((business, idx) => (
-                        <TableRow key={idx}>
+                    {props.business.map((business, index) => (
+                        <TableRow key={index}>
                             <TableCell>
                             <Link style={{ textDecoration: "underline", fontWeight: "bold"}} to={`/details/${business.id}`}>{business.name}</Link>
                                 </TableCell>

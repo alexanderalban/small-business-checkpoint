@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { Redirect } from 'react-router'
 import {
   TextField,
   Button,
   Container
 } from '@material-ui/core'
-import cookie from 'cookie'
-import Typography from '@material-ui/core/Typography';
-import Toolbar from '@material-ui/core/Toolbar';
 
 class Login extends Component {
   state = {
@@ -22,10 +19,9 @@ handleTextChange = (e) => {
     this.setState(state)
 }
 
-
  login = (e) => {
     e.preventDefault()
-    document.cookie = "loggedIn=true;max-age=60*1000*"
+    document.cookie = "loggedIn=true;max-age=480*1000*"
 
     window.location.replace("/listings")
   }
@@ -66,6 +62,5 @@ handleTextChange = (e) => {
     );
   }
 }
-
 
 export default Login;

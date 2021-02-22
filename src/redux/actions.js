@@ -1,4 +1,4 @@
-const url = "https://maps.google.com/maps/api/geocode/json?key=AIzaSyDV9qVXL_Czy4GtRoz6phwRS5iKrQh8m1o&address=Austin+Texas"
+
 
 
 // for business locations
@@ -17,15 +17,30 @@ export const removeBusiness = (index) => {
 }
 
 
-// for user added location
-export const fetchLocation = () => {
+// latitude for user added location
+export const fetchLatitude = (address) => {
     return (dispatch) => {
-        fetch(url)
+        fetch(`https://maps.google.com/maps/api/geocode/json?key=AIzaSyDV9qVXL_Czy4GtRoz6phwRS5iKrQh8m1o&address=${address}`)
             .then(res => res.json())
             .then(response => {
                 const action = {
-                    type: 'FETCH_LOCATION',
-                    value: response.Results
+                    type: 'FETCH_LATITUDE',
+                    value: response.results.geometry.location.lat
+                }
+                dispatch(action)
+            })
+    }
+}
+
+//longitude for user added location
+export const fetchLongitude = (address) => {
+    return (dispatch) => {
+        fetch(`https://maps.google.com/maps/api/geocode/json?key=AIzaSyDV9qVXL_Czy4GtRoz6phwRS5iKrQh8m1o&address=${address}`)
+            .then(res => res.json())
+            .then(response => {
+                const action = {
+                    type: 'FETCH_LONGITUDE',
+                    value: response.results.geometry.location.lng
                 }
                 dispatch(action)
             })
@@ -40,10 +55,39 @@ export const login = (isLoggedIn) => {
     }
 }
 
+// for the user's username
+export const userUpdate = (username) => {
+    return {
+        type: "USER_UPDATE",
+        value: username
+    }
+}
+
 //for logout
 export const logout = (isLoggedIn) => {
     return {
         type: 'LOGOUT',
         value: isLoggedIn
+    }
+}
+
+export const enableLogin = () => {
+    return {
+        type: 'ENABLE_LOGIN',
+        value: true
+    }
+}
+
+export const disableLogin = () => {
+    return {
+        type: 'DISABLE_LOGIN',
+        value: false
+    }
+}
+
+export const updateUserName = (userName) => {
+    return {
+        type: "UPDATE_USERNAME",
+        value: userName
     }
 }
