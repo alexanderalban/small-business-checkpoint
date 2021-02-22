@@ -6,6 +6,8 @@ import AddMap from '../containers/AddMap'
 
 const Add = (props) => {
 
+//These are our individual states for the parts of our businesses (address, etc.)
+
     const [name, setName] = useState("")
     const [address, setAddress] = useState("")
     const [hours, setHours] = useState("")
@@ -14,6 +16,9 @@ const Add = (props) => {
     const [lat, setLat] = useState("");
     const [lng, setLng] = useState("");
 
+
+
+//This is how we handle the changes that the user inputs, so they can see what's entered
     const handleNameChange = (e) => {
         setName(e.target.value)
     }
@@ -36,6 +41,8 @@ const Add = (props) => {
         setLng(e.target.value)
     }
 
+
+//how we handle the submitted data
     const handleSubmit = (e) => {
         e.preventDefault();
         const idNumber = parseInt(props.business[props.business.length - 1].id);
@@ -52,7 +59,7 @@ const Add = (props) => {
         props.addBusiness(newBusiness);
     }
 
-
+//the form that is returned
         return (
             <Container align="center">
                 <Grid style={{marginTop: "30px"}} container direction="row" align="center">

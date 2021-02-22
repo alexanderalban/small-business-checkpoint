@@ -6,27 +6,40 @@ import {
   Container
 } from '@material-ui/core'
 
+//This creates a local state for the login
 class Login extends Component {
   state = {
       username: '',
-      password: ''
+      password: '',
+
   }
 
+//This handles the changes made by the user so that they can see the change
 
-handleTextChange = (e) => {
-    const state = { ...this.state }
-    state[e.target.name] = e.target.value
-    this.setState(state)
+handleUsernameChange = (e) => {
+    const username = { ...this.username }
+    username[e.target.name] = e.target.value
+    this.setState(username)
 }
 
+handlePasswordChange = (e) => {
+  const password = { ...this.password }
+  password[e.target.name] = e.target.value
+  this.setState(password)
+}
+
+
+//This is our onsubmit for this form, allowing the data to be gathered
  login = (e) => {
     e.preventDefault()
     document.cookie = "loggedIn=true;max-age=480*1000*"
+    this.setState({username : this.state.username})
+    this.setState({password : this.state.password})
 
     window.location.replace("/listings")
   }
 
-
+//This is the form itself
 
   render() {
     return (
@@ -35,7 +48,7 @@ handleTextChange = (e) => {
           <form onSubmit={this.login}>
             <TextField
               required
-              onChange={this.handleTextChange}
+              onChange={this.handleUsernameChange}
               value={this.state.username}
               name="username"
               label="Username"
@@ -43,7 +56,7 @@ handleTextChange = (e) => {
               <br></br>
             <TextField
               required
-              onChange={this.handleTextChange}
+              onChange={this.handlePasswordChange}
               value={this.state.password}
               name="password"
               label="Password"

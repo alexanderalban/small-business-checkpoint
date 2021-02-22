@@ -49,7 +49,7 @@ const Navigation = (props) => {
     )
     }
     else if (checkAuth()) {
-        console.log("username is" + " " + props.user[0].username)
+        console.log("username is" + " " + props.currentUser)
         console.log("new users are " + props.user)
         return( 
 
@@ -72,7 +72,7 @@ const Navigation = (props) => {
             </Toolbar>
             <Toolbar className="login-bar" variant="md" style={{ background: '#D3D3D3', height: "20px", zIndex:"-1"}}>
                 <Typography style={{ color: '#9F9F9F'}}>
-                    Logged in as: {props.user[2].username}
+                    Logged in as: {props.user[props.user.length - 1].username}
                 </Typography>
             </Toolbar>
         </AppBar>

@@ -1,6 +1,8 @@
 import { connect } from 'react-redux'
 import Login from '../components/Login'
 
+// This maps our state data to our component so that it can be used as a prop
+
 const mapStateToProps = (state) => {
     return {
         

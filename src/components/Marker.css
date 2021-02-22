@@ -1,3 +1,5 @@
+/* This is the css styling for the marker used on the map component */
+
 .marker {
     position: absolute;
     top: 50%;

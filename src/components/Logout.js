@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import {Container, Button} from '@material-ui/core'
 import cookie from 'cookie'
 
-
+//This component was added so give the user a buffer between logging out
+//This way they are informed that they cannot edit anything while logged out
 
 class Logout extends Component {
 

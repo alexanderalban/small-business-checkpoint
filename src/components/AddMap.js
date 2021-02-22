@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import { useParams } from 'react-router-dom'
 
+
+
+//This is the map that is shown when the user is entering a new business
+//it is, more or less, a default view of Austin
 const AddMap = (props) => {
 
     console.log(props.business)
@@ -16,6 +20,8 @@ const AddMap = (props) => {
       };
     };
   
+
+//this sets the center of the map to the center of Austin
       const [center, setCenter] = useState({lat: 30.267153, lng: -97.74306079999999 });
       const [zoom, setZoom] = useState(13);
       return (

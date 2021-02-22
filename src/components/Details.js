@@ -4,6 +4,8 @@ import {
 } from '@material-ui/core'
 import Map from '../containers/Map'
 
+//This component lists the details for a particular restaurant when the name is 
+//clicked on the list
 const Details = (props) => {
     const id = props.match.params.id
     const thisBusiness = props.business.find(business => business.id == id)

@@ -3,6 +3,14 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker.js'
 import { useParams } from 'react-router-dom'
 
+
+//This is the map that our user sees when getting the details of a particular
+//business. It uses the latitude and longitude data provided to pinpoint
+//the location of the business on the map.
+
+
+//The section "Marker" shows a circle on the map, indicating the exact location
+
 const Map = (props) => {
     console.log(props.business)
     const { id } = useParams();

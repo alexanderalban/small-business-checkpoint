@@ -71,20 +71,6 @@ export const logout = (isLoggedIn) => {
     }
 }
 
-export const enableLogin = () => {
-    return {
-        type: 'ENABLE_LOGIN',
-        value: true
-    }
-}
-
-export const disableLogin = () => {
-    return {
-        type: 'DISABLE_LOGIN',
-        value: false
-    }
-}
-
 export const updateUserName = (userName) => {
     return {
         type: "UPDATE_USERNAME",

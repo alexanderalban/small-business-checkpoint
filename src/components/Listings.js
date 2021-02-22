@@ -11,6 +11,10 @@ import { Link } from 'react-router-dom'
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import cookie from 'cookie'
 
+//This is the listing component, showing a list of the businesses from the API.
+//It uses cookies to check to see if a user is logged in.
+//if so, the user can add or remove listings
+
 const checkAuth = () => {
     const cookies = cookie.parse(document.cookie)
     return cookies["loggedIn"] ? true : false
